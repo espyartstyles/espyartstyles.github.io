@@ -34,6 +34,12 @@
       (params.get("error_description") || params.get("error"));
     document.getElementById("intro").className = "error";
   }
+  // Le programme SUNU DRAMA AI attend la réponse sur ce PC (port local 8723) : on la lui transmet
+  // directement. Si le programme n'est pas lancé, l'adresse reste affichée pour un copier-coller.
+  if (params.get("code") && params.get("state")) {
+    document.getElementById("status").textContent = "Transmission au programme…";
+    setTimeout(() => { location.href = "http://127.0.0.1:8723/callback" + location.search; }, 800);
+  }
   document.getElementById("copy").addEventListener("click", () => {
     box.select();
     try {

@@ -15,36 +15,47 @@
 <body>
 <main>
   <h1>Règles de confidentialité</h1>
-  <p>Dernière mise à jour : 16 octobre 2026</p>
+  <p>Dernière mise à jour : 18 octobre 2026</p>
 
   <p>SUNU DRAMA AI est une application privée utilisée par l'équipe de la chaîne Le Conteur TV pour publier
-  ses propres vidéos sur YouTube. Elle n'est pas proposée au public.</p>
+  ses propres vidéos sur ses propres comptes YouTube et TikTok. Elle n'est pas proposée au public.</p>
 
-  <h2>Données Google utilisées</h2>
-  <p>L'application demande uniquement l'autorisation <em>YouTube Data API – mise en ligne de vidéos</em>
-  (<code>youtube.upload</code>). Elle s'en sert pour une seule chose : envoyer les vidéos et miniatures
-  produites par la chaîne sur la chaîne YouTube du compte qui a donné son autorisation.</p>
-  <p>L'application ne lit pas, ne collecte pas et ne modifie pas d'autres données de votre compte Google
-  ou YouTube.</p>
+  <h2>Données YouTube (Google) utilisées</h2>
+  <p>L'application utilise l'autorisation <em>YouTube Data API – gestion du compte YouTube</em>
+  (<code>youtube</code>) uniquement pour : mettre en ligne et programmer les vidéos et miniatures de la chaîne,
+  corriger leurs descriptions, remplacer ou supprimer une vidéo de la chaîne, consulter leur statut de
+  publication et ranger les vidéos dans les playlists de la chaîne.</p>
+  <p>Elle ne lit pas les commentaires, les abonnés, l'historique, les messages ni aucune autre donnée
+  personnelle du compte Google.</p>
+
+  <h2>Données TikTok utilisées</h2>
+  <p>L'application utilise TikTok Login Kit et Content Posting API avec les autorisations
+  <code>user.info.basic</code> (nom et avatar du compte, pour vérifier que la publication part sur le bon
+  compte) et <code>video.publish</code> / <code>video.upload</code> (publier les vidéos de la chaîne sur le
+  compte TikTok qui a donné son autorisation). Elle ne lit ni les vidéos d'autres utilisateurs, ni les
+  messages, ni les abonnés, ni aucune autre donnée du compte TikTok.</p>
 
   <h2>Stockage et partage</h2>
-  <p>Le jeton d'accès accordé par Google est enregistré uniquement sur l'ordinateur qui exécute l'application.
-  Il n'est transmis à aucun serveur tiers, n'est ni vendu ni partagé, et n'est pas utilisé à des fins
-  publicitaires.</p>
+  <p>Les jetons d'accès accordés par Google et TikTok sont enregistrés uniquement sur l'ordinateur qui
+  exécute l'application. Ils ne sont transmis à aucun serveur tiers, ne sont ni vendus ni partagés, et ne
+  sont pas utilisés à des fins publicitaires. Aucune donnée d'utilisateur n'est collectée.</p>
 
   <h2>Conformité</h2>
   <p>L'utilisation et le transfert des informations reçues des API Google par SUNU DRAMA AI respectent les
   <a href="https://developers.google.com/terms/api-services-user-data-policy">Règles relatives aux données
-  utilisateur des services d'API Google</a>, y compris les exigences d'utilisation limitée.</p>
+  utilisateur des services d'API Google</a>, y compris les exigences d'utilisation limitée. L'utilisation des
+  API TikTok respecte les <a href="https://www.tiktok.com/legal/page/global/tik-tok-developer-terms-of-service/en">
+  conditions d'utilisation des développeurs TikTok</a>.</p>
 
   <h2>Révocation</h2>
   <p>Vous pouvez retirer l'accès à tout moment depuis
-  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> (Google) et depuis
+  les paramètres de sécurité de l'application TikTok (« Applications et services »).</p>
 
   <h2>Contact</h2>
   <p>espy1266@gmail.com</p>
 
-  <p><a href="index.html">← Retour à l'accueil</a></p>
+  <p><a href="index.html">← Retour à l'accueil</a> · <a href="terms.html">Conditions d'utilisation</a></p>
 </main>
 </body>
 </html>

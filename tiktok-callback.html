@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connexion TikTok – SUNU DRAMA AI</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #1b1410; color: #f3e6d3; }
+  main { max-width: 640px; margin: 0 auto; padding: 56px 24px; line-height: 1.6; }
+  h1 { color: #f2b84b; font-size: 1.6rem; }
+  textarea { width: 100%; height: 7em; font: 0.95rem monospace; background: #2a201a; color: #fff;
+             border: 1px solid #f2b84b; border-radius: 8px; padding: 10px; box-sizing: border-box; }
+  button { margin-top: 12px; padding: 10px 18px; font-size: 1rem; border: 0; border-radius: 8px;
+           background: #f2b84b; color: #1b1410; cursor: pointer; }
+  .error { color: #ff8a7a; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Connexion TikTok</h1>
+  <p id="intro">Copie l'adresse ci-dessous et colle-la dans la fenêtre du programme SUNU DRAMA AI.</p>
+  <textarea id="url" readonly></textarea>
+  <button id="copy" type="button">Copier</button>
+  <p id="status"></p>
+</main>
+<script>
+  // Cette page ne transmet rien : elle affiche seulement l'adresse de retour de TikTok
+  // (qui contient le code d'autorisation) pour que l'utilisateur la colle dans le programme.
+  const params = new URLSearchParams(location.search);
+  const box = document.getElementById("url");
+  box.value = location.href;
+  if (params.get("error")) {
+    document.getElementById("intro").textContent = "TikTok a refusé la connexion : " +
+      (params.get("error_description") || params.get("error"));
+    document.getElementById("intro").className = "error";
+  }
+  document.getElementById("copy").addEventListener("click", () => {
+    box.select();
+    try {
+      navigator.clipboard.writeText(box.value);
+      document.getElementById("status").textContent = "Copié !";
+    } catch (e) {
+      document.execCommand("copy");
+      document.getElementById("status").textContent = "Copié !";
+    }
+  });
+</script>
+</body>
+</html>
